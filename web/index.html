@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pawn Racing Online</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Browser Multiplayer Prototype</p>
+          <h1>Pawn Racing Online</h1>
+          <p class="lead">
+            Браузерная версия вашей игры с комнатами, сетевым состоянием и серверной
+            проверкой ходов.
+          </p>
+        </div>
+        <div class="controls">
+          <button id="create-room-btn" class="primary">Создать комнату</button>
+          <div class="join-row">
+            <input id="room-id-input" maxlength="12" placeholder="Код комнаты" />
+            <button id="join-room-btn">Войти</button>
+          </div>
+          <p id="connection-hint" class="muted">Сначала создайте комнату или войдите по коду.</p>
+        </div>
+      </section>
+
+      <section class="layout">
+        <div class="board-panel">
+          <div id="board" class="board"></div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="card">
+            <h2>Комната</h2>
+            <p id="room-label">Не подключено</p>
+            <p id="you-label">Роль: -</p>
+            <p id="turn-label">Ход: -</p>
+            <button id="restart-btn">Запросить новую партию</button>
+          </div>
+
+          <div class="card">
+            <h2>Статус</h2>
+            <p id="status-text">Ожидание подключения.</p>
+            <p id="votes-text" class="muted"></p>
+          </div>
+
+          <div class="card">
+            <h2>Игроки</h2>
+            <ul id="players-list" class="players"></ul>
+          </div>
+
+          <div class="card">
+            <h2>Ходы</h2>
+            <ol id="moves-list" class="moves"></ol>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+  </html>
